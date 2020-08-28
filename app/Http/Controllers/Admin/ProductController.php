@@ -109,7 +109,7 @@ class ProductController extends Controller
         $product->update($data);
         
         if(!is_null($categories))
-            $product->categories()->sync($data[$categories]);
+            $product->categories()->sync($categories);
 
         if($request->hasFile('photos')){
             $images = $this->imageUpload($request->file('photos'), 'image');
