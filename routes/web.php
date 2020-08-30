@@ -44,7 +44,7 @@ Route::get('/model', function () {
 
     //$user = \App\User::find(42);
     //$user->update([
-       // 'name' => 'Atualizado com Mass Update'
+    // 'name' => 'Atualizado com Mass Update'
     //]); // true ou false
 //dd($user);
 
@@ -56,14 +56,14 @@ Route::get('/model', function () {
     // Como pegar produtos de uma loja
     //$loja = \App\Store::find(1);
 
-   //return $loja->products()->where('id', 1)->get();
-   //dd($loja->products());
+    //return $loja->products()->where('id', 1)->get();
+    //dd($loja->products());
 
-   // Pegar as lojas de uma categoria
-   //$categoria = \App\Category::find(1);
-   //$categoria->$products;
+    // Pegar as lojas de uma categoria
+    //$categoria = \App\Category::find(1);
+    //$categoria->$products;
 
-   // Criar uma loja para um usuário
+    // Criar uma loja para um usuário
 //    $user = \App\User::find(10);
 //    $store = $user->store()->create([
 //        'name' => 'Loja Teste',
@@ -87,7 +87,7 @@ Route::get('/model', function () {
     // dd($product);
 
 
-   //Criar uma categoria
+    //Criar uma categoria
 
 //    \App\Category::create([
 //        'name' => 'Games',
@@ -104,14 +104,14 @@ Route::get('/model', function () {
 
 
 
-   //Adicionar um produto para uma categoria ou vice-versa
+    //Adicionar um produto para uma categoria ou vice-versa
 
-   //$product = \App\Product::find(41);
-   //dd($product->categories()->attach([1])); Criar dependência
-   //dd($product->categories()->detach([1])); Deletar dependência
-   //dd($product->categories()->sync([2]));
+    //$product = \App\Product::find(41);
+    //dd($product->categories()->attach([1])); Criar dependência
+    //dd($product->categories()->detach([1])); Deletar dependência
+    //dd($product->categories()->sync([2]));
 
-   //return $product->categories;
+    //return $product->categories;
 });
 
 Route::group(['middleware' => ['auth']], function(){

@@ -27,7 +27,7 @@ class Product extends Model
      *
      * @return string
      */
-    
+
    public function store()
    {
        return $this->belongsTo(Store::class);
@@ -40,6 +40,10 @@ class Product extends Model
 
    public function photos(){
        return $this->hasMany(ProductPhoto::class);
+   }
+
+   public function limit(int $int)
+   {
    }
 
 }
