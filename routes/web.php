@@ -44,7 +44,11 @@ Route::get('/model', function () {
 
     //$user = \App\User::find(42);
     //$user->update([
+<<<<<<< HEAD
     // 'name' => 'Atualizado com Mass Update'
+=======
+       // 'name' => 'Atualizado com Mass Update'
+>>>>>>> origin/master
     //]); // true ou false
 //dd($user);
 
@@ -56,6 +60,7 @@ Route::get('/model', function () {
     // Como pegar produtos de uma loja
     //$loja = \App\Store::find(1);
 
+<<<<<<< HEAD
     //return $loja->products()->where('id', 1)->get();
     //dd($loja->products());
 
@@ -64,6 +69,16 @@ Route::get('/model', function () {
     //$categoria->$products;
 
     // Criar uma loja para um usuário
+=======
+   //return $loja->products()->where('id', 1)->get();
+   //dd($loja->products());
+
+   // Pegar as lojas de uma categoria
+   //$categoria = \App\Category::find(1);
+   //$categoria->$products;
+
+   // Criar uma loja para um usuário
+>>>>>>> origin/master
 //    $user = \App\User::find(10);
 //    $store = $user->store()->create([
 //        'name' => 'Loja Teste',
@@ -87,7 +102,11 @@ Route::get('/model', function () {
     // dd($product);
 
 
+<<<<<<< HEAD
     //Criar uma categoria
+=======
+   //Criar uma categoria
+>>>>>>> origin/master
 
 //    \App\Category::create([
 //        'name' => 'Games',
@@ -104,6 +123,7 @@ Route::get('/model', function () {
 
 
 
+<<<<<<< HEAD
     //Adicionar um produto para uma categoria ou vice-versa
 
     //$product = \App\Product::find(41);
@@ -112,6 +132,16 @@ Route::get('/model', function () {
     //dd($product->categories()->sync([2]));
 
     //return $product->categories;
+=======
+   //Adicionar um produto para uma categoria ou vice-versa
+
+   //$product = \App\Product::find(41);
+   //dd($product->categories()->attach([1])); Criar dependência
+   //dd($product->categories()->detach([1])); Deletar dependência
+   //dd($product->categories()->sync([2]));
+
+   //return $product->categories;
+>>>>>>> origin/master
 });
 
 Route::group(['middleware' => ['auth']], function(){
