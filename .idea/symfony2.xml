@@ -4,9 +4,5 @@
     <option name="directoryToWeb" value="public" />
     <option name="pluginEnabled" value="true" />
     <option name="twigBundleNamespaceSupport" value="false" />
-<<<<<<< HEAD
-    <option name="lastServiceGeneratorLanguage" value="yaml" />
-=======
->>>>>>> origin/master
   </component>
 </project>

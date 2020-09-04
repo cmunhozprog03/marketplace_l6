@@ -27,11 +27,11 @@ class Product extends Model
      *
      * @return string
      */
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/master
+
+
+
+
    public function store()
    {
        return $this->belongsTo(Store::class);
@@ -46,11 +46,10 @@ class Product extends Model
        return $this->hasMany(ProductPhoto::class);
    }
 
-<<<<<<< HEAD
+
    public function limit(int $int)
    {
    }
 
-=======
->>>>>>> origin/master
+
 }

@@ -107,13 +107,13 @@ class ProductController extends Controller
 
         $product = $this->product->find($product);
         $product->update($data);
-        
+
         if(!is_null($categories))
-<<<<<<< HEAD
+
             $product->categories()->sync($categories);
-=======
-            $product->categories()->sync($data[$categories]);
->>>>>>> origin/master
+
+            //$product->categories()->sync($data[$categories]);
+
 
         if($request->hasFile('photos')){
             $images = $this->imageUpload($request->file('photos'), 'image');
