@@ -47,9 +47,7 @@ class Product extends Model
    }
 
 
-   public function limit(int $int)
-   {
-   }
+  
 
 
 }
