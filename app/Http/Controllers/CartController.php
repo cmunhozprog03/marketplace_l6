@@ -17,8 +17,22 @@ class CartController extends Controller
 
         //verificar se existe sessão para o produto
         if(session()->has('cart')){
-            // Existindo ou adiciono o produto nesta sessão
-            session()->push('cart', $product);
+
+            $products = session()->get('cart');
+            $productsSlugs = array_column($products,'slug');
+
+            if(in_array($product['slug'], $productsSlugs)){
+
+                $products = $this->productIncrement($product['slug'], $product['amount'], $products);
+
+                session()->put('cart', $products);
+            } else {
+                 // Existindo ou adiciono o produto nesta sessão
+                session()->push('cart', $product);
+            }
+
+
+           
         } else {
             //não existindo eu crio a sessão com o primeiro produto
             $products[] = $product;
@@ -50,7 +64,17 @@ class CartController extends Controller
 
         flash('Compra cancelada')->success();
         return redirect()->route('cart.index');
+    }
 
+    private function productIncrement($slug, $amount, $products)
+    {
+        $products = array_map(function($line) use ($slug, $amount){
+            if($slug == $line['slug']){
+                $line['amount'] += $amount;
+            }
+            return $line;
+        }, $products);
 
+        return $products;
     }
 }
